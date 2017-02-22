@@ -1,0 +1,57 @@
+<?php
+namespace Cine\Entity;
+
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\Table;
+use Doctrine\ORM\Mapping\Index;
+use Doctrine\ORM\Mapping\Id;
+use Doctrine\ORM\Mapping\GeneratedValue;
+use Doctrine\ORM\Mapping\Column;
+
+/**
+* Pelicula
+*
+* @Entity
+* @Table (name = "movie",indexes={ @Index(name="year_idx", columns="year")})
+*
+*/
+
+class Pelicula{
+
+/**
+* @var int
+*
+* @Id
+* @GeneratedValue
+* @Column(type="Integer")
+*/
+private $id;
+
+/**
+* @var string
+*
+* @Column(type="string", length=100,name="spanish_title")
+*/
+private $titulo;
+
+/**
+* @var string
+*
+* @Column(type="string", length=100,name="original_title",nullable=false)
+*/
+private $tituloOriginal;
+
+/**
+* @var string
+*
+* @Column(type="string", length=100)
+*/
+private $director;
+
+/**
+* @var int
+*
+* @Column(type="Integer", name="year", nullable=false, unique=false, options ={"unsigned":true, "default":0})
+*/
+private $anyo;
+}

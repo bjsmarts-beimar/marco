@@ -1,0 +1,11 @@
+{
+	"name":"Test/Cine",
+	"type":"projet",
+	"description": "Ejemplo para uns introduccion a doctrine",
+	"require":{
+		"doctrine/orm": "*"	
+	},
+	"autoload":{
+		"psr-0": { "":"src/"}	
+	}
+}
